@@ -1,0 +1,114 @@
+.box_container {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 10px;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+.box:hover {
+  transform: scale(1.1);
+  box-shadow: 8px 5px 6px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  /* -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1); */
+}
+.box:hover .caption {
+  background: #fff;
+  color: #000;
+}
+.box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.box .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  color: #fff;
+}
+.box .caption > * {
+  padding: 0.9rem 1rem;
+}
+.box .caption .content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.box .caption .content span {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.box .caption .content small {
+  font-size: 12px;
+}
+
+.box .caption .content .icons {
+  display: none;
+}
+
+.box:hover .caption .content .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.box .caption .content .icons a {
+  width: 70px;
+  background: transparent;
+  text-align: center;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.box .caption .content .icons .red {
+  background: red;
+}
+
+.box .caption .content .icons .blue {
+  background: blue;
+}
+
+@media(max-width: 1024px) {
+  .box_container {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media(max-width: 768px) {
+  .box_container {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media(max-width: 568px) {
+  .box_container {
+    grid-template-columns: auto;
+    grid-gap: 30px;
+  }
+  .box {
+    height: 300px;
+  }
+}

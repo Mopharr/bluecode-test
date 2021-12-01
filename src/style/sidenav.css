@@ -1,0 +1,53 @@
+.side {
+  width: 17%;
+  border-right: 1px solid rgb(138, 138, 138);
+  min-height: 100%;
+  padding: 2em;
+}
+.side label {
+  font-size: 25px;
+  font-family: monospace;
+  font-weight: bold;
+  color: rgb(49, 49, 153);
+  padding: 0.5em;
+}
+
+.side p {
+  font-size: 25px;
+  font-family: monospace;
+  font-weight: bold;
+  color: rgb(49, 49, 153);
+  padding: 0.5em;
+}
+
+.mainList ul {
+  padding: 0;
+}
+.mainList ul li {
+  list-style: none;
+  padding: 0.8em;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.mainList ul li:hover {
+  font-size: 22px;
+}
+.mainList ul li .icon {
+  font-size: 20px;
+  margin-right: 0.5em;
+}
+.mainList ul li:hover .icon{
+  color: blueviolet;
+}
+.mainList p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media(max-width: 568px) {
+  .side {
+      width: 100%;
+  }
+}
